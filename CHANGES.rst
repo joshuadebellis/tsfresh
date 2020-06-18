@@ -20,6 +20,8 @@ Unreleased
 - Bugfixes:
     - Fixed readthedocs (#695, #696)
     - Fix spark and dask after #705 and for non-id named id columns (#712)
+- The default branch of tsfresh is now called main
+
 
 Version 0.16.0
 ==============
