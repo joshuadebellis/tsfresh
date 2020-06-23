@@ -13,7 +13,7 @@ import math
 import warnings
 from collections import Generator, Iterable
 from functools import partial
-from pathos.pools import ParallelPool as Pool
+from pathos.pools import ProcessPool as Pool
 
 from tqdm import tqdm
 
