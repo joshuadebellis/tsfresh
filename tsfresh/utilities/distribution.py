@@ -13,7 +13,7 @@ import math
 import warnings
 from collections import Generator, Iterable
 from functools import partial
-from pathos.multiprocessing import ProcessingPool as Pool
+from pathos.pools import ParallelPool as Pool
 
 from tqdm import tqdm
 
@@ -377,7 +377,7 @@ class MultiprocessingDistributor(DistributorBaseClass):
         :param show_warnings: whether to show warnings or not.
         :type show_warnings: bool
         """
-        self.pool = Pool(processes=n_workers, initializer=initialize_warnings_in_workers, initargs=(show_warnings,))
+        self.pool = Pool(nodes=n_workers)
         self.n_workers = n_workers
         self.disable_progressbar = disable_progressbar
         self.progressbar_title = progressbar_title
